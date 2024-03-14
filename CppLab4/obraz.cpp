@@ -9,10 +9,13 @@ Obraz::Obraz(int wiersze, int kolumny):
 	}
 
 	obrazek = new (std::nothrow) Piksel**[wiersze];
+	if (obrazek == nullptr) return;
 	for (int i = 0; i < wiersze; i++) {
 		obrazek[i] = new (std::nothrow) Piksel*[kolumny];
+		if (obrazek[i] == nullptr) return;
 		for (int j = 0; j < kolumny; j++) {
 			obrazek[i][j] = new (std::nothrow) Piksel;
+			if (obrazek[i][j] == nullptr) return;
 		}
 	}
 }
