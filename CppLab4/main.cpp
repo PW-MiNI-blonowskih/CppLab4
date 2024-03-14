@@ -6,9 +6,9 @@ int main()
 {
 	std::cout << "===================== ETAP 1 =====================" << std::endl;
 
-	piksel p1;
-	piksel p2(0, 255, 0);
-	piksel* p3 = new piksel(200, 100, 255);
+	Piksel p1;
+	Piksel p2(0, 255, 0);
+	Piksel* p3 = new Piksel(200, 100, 255);
 	std::cout << "Kilak roznych pikseli:" << std::endl;
 	std::cout << ' ' << p1 << ' ' << p2 << ' ' << *p3 << std::endl;
 	std::cout << std::endl;
@@ -19,13 +19,13 @@ int main()
 		{
 			for (int k = 0; k < 255; k += 50)
 			{
-				piksel p4(i, j, k);
+				Piksel p4(i, j, k);
 				std::cout << p4;
 			}
 		}
 		std::cout << std::endl;
 	}
-
+	
 	std::cout << std::endl;
 	std::cout << "Zmiana koloru:" << std::endl;
 	std::cout << p1 << " -> ";
@@ -35,7 +35,7 @@ int main()
 
 	std::cout << std::endl;
 	std::cout << "Dzialanie operatora inkrementacji:" << std::endl;
-	piksel p5(125, 126, 127);
+	Piksel p5(125, 126, 127);
 	std::cout << p5; 
 	std::cout << ++p5;
 	std::cout << ++p5;
@@ -45,11 +45,10 @@ int main()
 
 	std::cout << "===================== ETAP 2 =====================" << std::endl;
 
-/*
-	obraz ob1;
+	Obraz ob1;
 	std::cout << "Obraz 1 (pusty):" << std::endl;
 	std::cout << ob1 << std::endl;
-	obraz *ob2 = new obraz(8, 17);
+	Obraz *ob2 = new Obraz(8, 17);
 	std::cout << "Obraz 2 (szary):" << std::endl;
 	std::cout << *ob2 << std::endl;
 
@@ -69,7 +68,7 @@ int main()
 	(*ob2)(6, 3, 255, 0, 0); (*ob2)(6, 13, 255, 0, 0);
 	std::cout << *ob2 << std::endl;
 
-	obraz ob3(*ob2);
+	Obraz ob3(*ob2);
 	std::cout << "Kopiowanie obrazu:" << std::endl;
 	std::cout << ob3 << std::endl;
 	ob3(1, 8, 255, 0, 255);
@@ -88,7 +87,7 @@ int main()
 	std::cout << *ob2 << std::endl;
 
 	delete ob2;
-*/
+
 	delete p3;
 	return 0;
 }

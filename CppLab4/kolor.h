@@ -4,9 +4,9 @@
 void setCzerwony();		//czerwony
 void setZielony();		//zielony
 void setNiebieski();	//niebieski
-void setZolty();		//¯ó³ty
+void setZolty();		//ï¿½ï¿½ty
 void setFioletowy();	//Fioletowy
 void setTurkusowy();	//Turkusowy
 void setSzary();		//Szary
-void setBialy();		//Bia³y
-void setDomyslny();		//Domyœlny
+void setBialy();		//Biaï¿½y
+void setDomyslny();		//Domyï¿½lny

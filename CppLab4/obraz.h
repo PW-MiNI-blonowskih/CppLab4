@@ -2,22 +2,22 @@
 #include "piksel.h"
 #include <iostream>
 
-class obraz
+class Obraz
 {
-	int wiersze; // Iloœæ wierszy obrazka
-	int kolumny; // Iloœæ kolumn obrazka
-	piksel*** obrazek; // WskaŸnik na dwuwymiarow¹ tablicê wskaŸników do pikseli
+	int wiersze; // Iloï¿½ï¿½ wierszy obrazka
+	int kolumny; // Iloï¿½ï¿½ kolumn obrazka
+	Piksel*** obrazek; // Wskaï¿½nik na dwuwymiarowï¿½ tablicï¿½ wskaï¿½nikï¿½w do pikseli
 
 public:
 	// Etap 2
 	//Konstruktor - 2.0p
-	obraz(int wiersze = 0, int kolumny = 0);
+	Obraz(int wiersze = 0, int kolumny = 0);
 	//Destruktor - 1.0p
-	~obraz();
-	//Operator wyjœcia - 1.0p
-
+	~Obraz();
+	//Operator wyjï¿½cia - 1.0p
+	friend std::ostream& operator<<(std::ostream& out, const Obraz& obraz);
 	//Operator funkcyjny - 1.0
-
-	//Konstruktor kopiuj¹cy - 1.0p
-
+	void operator()(int row, int col, int r, int g, int b);
+	//Konstruktor kopiujï¿½cy - 1.0p
+	Obraz(const Obraz& obraz);
 };
